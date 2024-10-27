@@ -29,7 +29,7 @@ class T547 : public PollingComponent, public display::DisplayBuffer {
   void display();
   void display_framebuffer();
   void clean();
-  void update_from_framebuffer() override;
+  void update_from_framebuffer();
   void update() override;
 
   void setup() override;
