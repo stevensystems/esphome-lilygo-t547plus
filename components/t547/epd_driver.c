@@ -668,10 +668,9 @@ void epd_copy_to_framebuffer(Rect_t image_area, uint8_t *image_data,
 
 void IRAM_ATTR epd_draw_grayscale_image(Rect_t area, uint8_t *data)
 {
-    epd_draw_image(area, data, BLACK_ON_WHITE); // MODE_GL16
+    epd_draw_image(area, data, BLACK_ON_WHITE);
     epd_draw_image(area, data, WHITE_ON_BLACK);
 }
-// WHITE_ON_BLACK, BLACK_ON_WHITE, WHITE_ON_WHITE, GRAY_ON_GRAY
 
 void IRAM_ATTR epd_draw_frame_1bit(Rect_t area, uint8_t *ptr,
                                    DrawMode_t mode, int32_t time)
