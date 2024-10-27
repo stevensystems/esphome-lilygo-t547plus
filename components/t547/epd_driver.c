@@ -668,7 +668,7 @@ void epd_copy_to_framebuffer(Rect_t image_area, uint8_t *image_data,
 
 void IRAM_ATTR epd_draw_grayscale_image(Rect_t area, uint8_t *data)
 {
-    epd_draw_image(area, data, MODE_GL16);
+    epd_draw_image(area, data, WHITE_ON_BLACK); // MODE_GL16
 }
 
 
