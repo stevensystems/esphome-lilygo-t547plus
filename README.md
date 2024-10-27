@@ -1,6 +1,9 @@
 **USE AT YOUR OWN RISK**
+
 **I AM NOT HELD RESPONSIBLE IF ANYTHING HAPPENS TO YOUR DISPLAY**
+
 I modified the original component to allow quick refresh wich means that you have the option to update the display without it flashing black and white
+
 The original update function that refreshes the display and flashed black and white is still present in this fork
 
 The function to update the display can be called from lambda:
