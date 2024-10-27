@@ -42,6 +42,11 @@ void T547::update() {
   this->display();
 }
 
+void T547::update_from_framebuffer() {
+  this->do_update_();
+  this->display_framebuffer();
+}
+
 void HOT T547::draw_absolute_pixel_internal(int x, int y, Color color) {
   if (x >= this->get_width_internal() || y >= this->get_height_internal() || x < 0 || y < 0)
     return;
@@ -76,6 +81,17 @@ void T547::display() {
 
   epd_poweron();
   epd_clear();
+  epd_draw_grayscale_image(epd_full_screen(), this->buffer_);
+  epd_poweroff();
+
+  ESP_LOGV(TAG, "Display finished (full) (%ums)", millis() - start_time);
+}
+
+void T547::display_framebuffer() {
+  ESP_LOGV(TAG, "Display called");
+  uint32_t start_time = millis();
+
+  epd_poweron();
   epd_draw_grayscale_image(epd_full_screen(), this->buffer_);
   epd_poweroff();
 
