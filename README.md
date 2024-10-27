@@ -1,3 +1,18 @@
+**USE AT YOUR OWN RISK**
+**I AM NOT HELD RESPONSIBLE IF ANYTHING HAPPENS TO YOUR DISPLAY**
+I modified the original component to allow quick refresh wich means that you have the option to update the display without it flashing black and white
+The original update function that refreshes the display and flashed black and white is still present in this fork
+
+The function to update the display can be called from lambda:
+```yaml
+- lambda: |
+            // Will do a full refresh, but not flash the screen
+            my_display->update_from_framebuffer();
+
+            // Will do a full refresh and flash the screen, this method works with the original component too
+            my_display->update();
+```
+
 Credits to [Nickolay](https://github.com/nickolay) and thanks for creating this component!
 
 This repository contains a Display component for [ESPHome](https://esphome.io/)
