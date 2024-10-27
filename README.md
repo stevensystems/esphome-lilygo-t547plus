@@ -1,3 +1,5 @@
+Credits to [Nickolay](https://github.com/nickolay) and thanks for creating this component!
+
 This repository contains a Display component for [ESPHome](https://esphome.io/)
 to support the ESP32-S3 [LILYGO T5 4.7" Plus E-paper display](https://www.lilygo.cc/products/t5-4-7-inch-e-paper-v2-3).
 
@@ -16,7 +18,7 @@ number of options in your esphome config**:
 
 If you clone this repository, a working example is included:
 
-    git clone https://github.com/nickolay/esphome-lilygo-t547plus.git
+    git clone https://github.com/PrototypeSomething/esphome-lilygo-t547plus.git
     cd esphome-lilygo-t547plus
     esphome run basic.yaml
 
@@ -27,19 +29,19 @@ and adapt the `external_components` configuration as follows:
 # ... required esp32, platformio_options configuration omitted for brevity ...
 
 external_components:
-  - source: github://nickolay/esphome-lilygo-t547plus
+  - source: github://PrototypeSomething/esphome-lilygo-t547plus
     components: ["t547"]
 
 ## for those using ESPHome 2023.6.5 and earlier:
 # external_components:
-#   - source: github://nickolay/esphome-lilygo-t547plus@2023.6.5
+#   - source: github://PrototypeSomething/esphome-lilygo-t547plus@2023.6.5 # Not tested by me but provided by nickolay (github://nickolay/esphome-lilygo-t547plus@2023.6.5)
 #     components: [t547]
 
 
 display:
 - platform: t547
   id: t5_display
-  update_interval: 30s
+  update_interval: 30s # Remember to set to "update_interval: never" if using LVGL
 ```
 
 ## Discussion
