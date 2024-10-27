@@ -55,7 +55,6 @@ typedef enum
     BLACK_ON_WHITE = 1 << 0, /** Draw black / grayscale image on a white display. */
     WHITE_ON_WHITE = 1 << 1, /** "Draw with white ink" on a white display. */
     WHITE_ON_BLACK = 1 << 2, /** Draw with white ink on a black display. */
-    // GRAY_ON_GRAY = 0 << 0, /**Draw black / grayscale image on a black / grayscale display. */
 } DrawMode_t;
 
 /**
